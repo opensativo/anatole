@@ -13,9 +13,8 @@
       {{ end }}
     </div>
 
-    {{ .Content }}
+    {{ .Content }} {{ partial "share-buttons.html" . }}
   </div>
-  {{ partial "share-buttons.html" . }}
   <div class="post-footer">
     <div class="info">
       {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" .
