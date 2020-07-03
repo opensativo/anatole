@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 <head>
     <title> {{.Site.Params.author}}{{ with .Title }} | {{ . }}{{ end }} </title>
     <meta charset="utf-8">
@@ -7,7 +8,7 @@
     {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
     {{ range .Site.Params.customCss -}}
-    <link rel="stylesheet" href="{{ . | absURL }}" type="text/css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
     {{- end }}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Favicons -->
